@@ -1,0 +1,3 @@
+/home/the_last_kid/test/KamaCache-main/build/CMakeFiles/main.dir
+/home/the_last_kid/test/KamaCache-main/build/CMakeFiles/edit_cache.dir
+/home/the_last_kid/test/KamaCache-main/build/CMakeFiles/rebuild_cache.dir
