@@ -21,7 +21,7 @@ public:
 
     ~KArcCache() override = default;
 
-    virtual bool get(const Key& key, Value& value) override
+    bool get(const Key& key, Value& value) override
     {
         if (lruPart_->get(key, value))
         {
@@ -34,7 +34,7 @@ public:
         return false;
     }
 
-    virtual Value get(const Key& key) override
+    Value get(const Key& key) override
     {
         Value value;
         if (get(key, value))
@@ -44,7 +44,7 @@ public:
         throw std::runtime_error("Key not found");
     }
 
-    virtual void put(const Key& key, const Value& value) override
+    void put(const Key& key, const Value& value) override
     {
         if (lruPart_->contains(key) || lfuPart_->contains(key))
         {
